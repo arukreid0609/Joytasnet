@@ -31,11 +31,11 @@ public class App {
 			count++;
 
 			// 結果表示
-			System.out.printf("%d回目:%dG発見！\n", count, getGold);
+			System.out.printf("%d回目:%dG発見！", count, getGold);
 
 			// クリア判定
 			if (r == CLEAR) {
-				System.out.printf("脱出成功！%dG獲得した！\n", gold);
+				System.out.printf("\n脱出成功！%dG獲得した！\n", gold);
 				// 最高金額を越えたら
 				if (gold > maxGold) {
 					writeData("result.txt", gold);
@@ -45,7 +45,7 @@ public class App {
 
 			// 失敗判定
 			if (r == MISS) {
-				System.out.printf("%dG抱えて地雷を踏んだので終了です。。。\n", gold);
+				System.out.printf("\n%dG抱えて地雷を踏んだので終了です。。。\n", gold);
 				gold = 0;
 				break;
 			}
@@ -79,6 +79,5 @@ public class App {
 		} catch (IOException e) {
 			;
 		}
-
 	}
 }
